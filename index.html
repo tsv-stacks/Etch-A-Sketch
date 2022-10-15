@@ -5,8 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project: Etch-A-Sketch</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="myscripts.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <h1>Etch-A-Sketch</h1>
+    <div id="grid-container">
 
+    </div>
+
+    <div id="grid-inputs">
+        <label for="color-selection">Choose your color: </label>
+        <input type="color" id="color-selection">
+        <label for="grid-box-amount">Set your grid size: </label>
+        <input type="number" min="1" max="100" id="grid-box-amount">
+        <button id="btn-grid-size">Generate New Grid</button>
+        <button id="btn-clear">Clear</button>
+        <button id="btn-reset">Reset</button>
+    </div>
+
+    <footer>
+        <div>
+        <p>Copyright <a href="#" class="fa fa-copyright" style="color:black"></a> The Odin Project</p>
+        </div>
+        <div>
+        <p class="me-tsvstacks">Made by <a href="https://github.com/tsv-stacks">TSV-Stacks</a></p>
+        </div>
+        <div class="fa-icons">
+            <a href="https://www.linkedin.com/in/tarndeep-virdi/" target="_blank" class="fa-2x fa fa-linkedin-square" style="color:black"></a>
+            <a href="https://github.com/tsv-stacks" target="_blank" class="fa-2x fa fa-github-square"style="color:black"></a>
+        </div>
+    </footer>
 </body>
 </html>

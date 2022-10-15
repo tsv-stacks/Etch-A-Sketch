@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+    border: 1px red solid;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
