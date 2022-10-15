@@ -1,3 +1,8 @@
+:root {
+    --grid-cols: 16;
+    --grid-rows: 16;
+}
+
 * {
     box-sizing: border-box;
     border: 1px red solid;
@@ -8,6 +13,28 @@ html, body {
     margin: 0;
 }
 
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
 h1 {
     text-align: center;
 }
+
+/* GRID */
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-content: center;
+}
+
+.grid-item {
+    padding: 1em;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
