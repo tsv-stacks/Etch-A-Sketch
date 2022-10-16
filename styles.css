@@ -13,6 +13,14 @@
     background-color: var(--color);
 }
 
+html {
+    background-image:url("/background-art-g80e9b426a_1920.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    opacity: 0.85;
+}
+
 html, body {
     padding: 0;
     margin: 0;
@@ -26,14 +34,32 @@ html, body {
 
 h1 {
     text-align: center;
+    font-family: 'Titan One', cursive;
+    color: whitesmoke;
+    letter-spacing: .2rem;
+    font-size: 44px;
+    text-shadow: black 0px 0px 4px;
+    opacity: 1;
     /* color: var(--color); */
 }
 
 /* GRID */
 
 .grid-and-input {
+    font-family: 'Fuzzy Bubbles', cursive;
     max-width: 100%;
+    color: whitesmoke;
+    font-weight: bold;
 }
+
+#grid-inputs {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
+}
+
 
 #grid-container {
     display: grid;
@@ -50,8 +76,11 @@ h1 {
 }
 
 .grid-item {
-    padding: 0.75rem;
-    border: 1px solid #ddd;
+    /* padding: 0.5rem;
+    padding-left: 0;
+    padding-top: 0; */
+    padding: 0;
+    /* border: 1px solid #ddd; */
     text-align: center;
   }
 
@@ -59,22 +88,53 @@ h1 {
     background-color: var(--color);
 }
 
+button {
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-weight: bold ;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(90deg, #0066CC 0%, #c500cc 100%);
+    padding: 10px 50px;
+    border: none;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition : 1000ms;
+    transform: translateY(0);
+    }
+
+button:hover{
+    transition : 1000ms;
+    transform : translateY(-6px);
+    background: linear-gradient(90deg, #0066CC 0%, #c500cc 100%);
+    color: #ffffff;
+    border: none;
+    }
+
 /* FOOTER */
 
 footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-weight: bold;
+    opacity: 1;
 }
 
+footer a {
+    color: #000000;
+
+}
 
 @media only screen and (max-width: 696px) {
    .grid-and-input {
-    max-width: fit-content;
+    /* max-width: fit-content; */
+    width: 70%vw;
 
    }
 
    #grid-container {
-    max-width: fit-content;
+    /* max-width: fit-content; */
+    width: 70%vh;
    }
 }
