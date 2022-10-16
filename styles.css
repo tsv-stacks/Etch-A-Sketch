@@ -16,6 +16,7 @@ html, body {
 .flex {
     display: flex;
     justify-content: space-around;
+    text-align: center;
 }
 
 h1 {
@@ -24,6 +25,10 @@ h1 {
 
 /* GRID */
 
+.grid-and-input {
+    max-width: 100%;
+}
+
 #grid-container {
     display: grid;
     grid-template-columns: repeat(var(--grid-cols), 1fr);
@@ -31,6 +36,8 @@ h1 {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     align-content: center;
+    max-width: 544px;
+    max-height: 544px;
 }
 
 .grid-item {
@@ -38,3 +45,24 @@ h1 {
     border: 1px solid #ddd;
     text-align: center;
   }
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 696px) {
+   .grid-and-input {
+    max-width: fit-content;
+
+   }
+
+   #grid-container {
+    max-width: fit-content;
+   }
+}

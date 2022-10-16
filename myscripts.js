@@ -1,19 +1,28 @@
 const gridContainer = document.getElementById("grid-container");
-let num = 16;
-var customGridNumber = document.getElementById("grid-box-amount").value
-
-console.log(customGridNumber)
 
 generateGrid(16)
 
-function customGrid() {
-    console.log(customGridNumber)
-    if (customGridNumber < 1 || customGridNumber > 100) {
-        window.alert("Please only choose a number from 1 to 100!")
-    } else {
-        generateGrid(customGridNumber)
-    }
+// document.getElementById("btn-change-size").addEventListener("click", promptGridSize())
 
+function promptGridSize() {
+    let customSizePrompt = prompt("Choose a new grid size between 1 - 100");
+    let customSizePromptNumber = parseInt(customSizePrompt, 10)
+    if (Number.isFinite(customSizePromptNumber) == true) {
+        if (customSizePromptNumber >= 1 && customSizePromptNumber <= 100) {
+            console.log(customSizePromptNumber)
+            gridContainer.innerHTML = "";
+            generateGrid(customSizePromptNumber)
+        } else {
+            alert("Please only choose a number between 1 and 100")
+        }
+    } else {
+        alert("You did not enter a number.")
+    }
+}
+
+function resetGrid() {
+    gridContainer.innerHTML = "";
+    generateGrid(16)
 }
 
 function generateGrid(num) {

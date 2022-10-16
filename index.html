@@ -15,25 +15,19 @@
   <body>
     <h1>Etch-A-Sketch</h1>
 
-    <div class="flex">
+    <div class="grid-and-input flex">
       <div id="grid-inputs">
         <label for="color-selection">Choose your color: </label>
+        <br /><br />
         <input type="color" id="color-selection" />
-        <form>
-          <label for="grid-box-amount">Set your grid size: </label>
-          <input
-            type="number"
-            id="grid-box-amount"
-            min="1"
-            max="100"
-            name="grid-box-amount"
-          />
-          <button type="submit" id="btn-grid-size">Generate New Grid</button>
-          <p>Choose any number between 1 and 100!</p>
-        </form>
-
+        <br /><br />
+        <button id="btn-change-size" onclick="promptGridSize()">
+          Change Grid Size
+        </button>
+        <br /><br />
         <button id="btn-clear">Clear</button>
-        <button id="btn-reset" onclick="generateGrid(16)">Reset</button>
+        <br /><br />
+        <button id="btn-reset" onclick="resetGrid()">Reset</button>
       </div>
 
       <div id="grid-container"></div>
