@@ -13,3 +13,19 @@ function customGrid() {
     }
 
 }
+
+setHover = function () {
+    // Get all the divs on the page.
+    divs = document.getElementsByClassName("grid-item");
+    for (gridCounter = 0; gridCounter < divs.length; gridCounter++) {
+        divs[gridCounter].onmouseover = function () {
+            this.className = 'highlight-on';
+        }
+        divs[gridCounter].onmouseout = function () {
+            this.className = 'highlight-off';
+        }
+    }
+}
+
+
+// document.getElementById("btn-change-size").addEventListener("click", promptGridSize())
