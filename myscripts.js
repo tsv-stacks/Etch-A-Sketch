@@ -1,8 +1,15 @@
 const gridContainer = document.getElementById("grid-container");
+let colorChoice = document.getElementById("color-selection")
+let gridItemSelect = document.getElementsByClassName("grid-item")
 
 generateGrid(16)
 
 // document.getElementById("btn-change-size").addEventListener("click", promptGridSize())
+
+colorChoice.addEventListener("input", function () {
+    console.log(colorChoice.value);
+    document.documentElement.style.setProperty('--color', colorChoice.value);
+})
 
 function promptGridSize() {
     let customSizePrompt = prompt("Choose a new grid size between 1 - 100");
@@ -30,7 +37,8 @@ function generateGrid(num) {
     gridContainer.style.setProperty('--grid-cols', num);
     for (c = 0; c < (num * num); c++) {
         let cell = document.createElement("div");
-        gridContainer.appendChild(cell).className = "grid-item";
+        gridContainer.appendChild(cell).className = "grid-item ";
+        // + "grid-item" + [c]
     };
 
 }
