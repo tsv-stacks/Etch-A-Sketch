@@ -76,10 +76,8 @@ h1 {
 }
 
 .grid-item {
-    /* padding: 0.5rem;
-    padding-left: 0;
-    padding-top: 0; */
     padding: 0;
+    /* padding: 1rem; */
     /* border: 1px solid #ddd; */
     text-align: center;
   }
@@ -128,13 +126,11 @@ footer a {
 
 @media only screen and (max-width: 696px) {
    .grid-and-input {
-    /* max-width: fit-content; */
     width: 70%vw;
 
    }
 
    #grid-container {
-    /* max-width: fit-content; */
     width: 70%vh;
    }
 }
